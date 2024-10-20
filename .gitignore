@@ -1,0 +1,11 @@
+# Directories
+.vs/
+bin/
+bin-int/
+x64/
+obj/
+DEBUG/
+RELEASE/
+
+# Files
+*.user
