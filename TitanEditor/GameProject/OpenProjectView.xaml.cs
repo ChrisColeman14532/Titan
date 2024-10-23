@@ -23,6 +23,13 @@ namespace TitanEditor.GameProject
         public OpenProjectView()
         {
             InitializeComponent();
+
+            Loaded += (s, e) =>
+            {
+                var item = projectsListBox.ItemContainerGenerator.ContainerFromIndex
+                (projectsListBox.SelectedIndex) as ListBoxItem;
+                item?.Focus();
+            };
         }
 
         private void OnOpen_Button_Click(object sender, RoutedEventArgs e)
@@ -43,6 +50,7 @@ namespace TitanEditor.GameProject
             if (project != null)
             {
                 dialogResult = true;
+                win.DataContext = project;
             }
             win.DialogResult = dialogResult;
             win.Close();
