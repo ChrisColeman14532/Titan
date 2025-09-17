@@ -22,7 +22,8 @@ namespace TitanEditor.Utilities
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message);
-                // TODO: log error
+                Logger.Log(MessageType.Error, $"Failed to save file to {path}: {ex.Message}");
+                throw;
             }
         }
 
@@ -38,8 +39,8 @@ namespace TitanEditor.Utilities
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message);
-                // TODO: log error
-                return default(T);
+                Logger.Log(MessageType.Error, $"Failed to load file from {path}: {ex.Message}");
+                throw;
             }
         }
     }

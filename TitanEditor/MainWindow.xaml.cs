@@ -41,6 +41,7 @@ namespace TitanEditor
         private void OpenProjectBrowserDialog()
         {
             var projectBrowser = new ProjectBrowserDialog();
+            projectBrowser.Owner = this;
             if(projectBrowser.ShowDialog() == false || projectBrowser.DataContext == null)
             {
                 Application.Current.Shutdown();

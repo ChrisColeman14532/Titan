@@ -64,7 +64,7 @@ namespace TitanEditor.GameProject
             Serializer.ToFile(new ProjectDataList() { Projects = projects }, _projectDataPath);
         }
             
-        public static Project Open(ProjectData data)
+         public static Project Open(ProjectData data)
         {
             ReadProjectData();
             var project = _projects.FirstOrDefault(x=>x.FullPath == data.FullPath);
@@ -95,7 +95,7 @@ namespace TitanEditor.GameProject
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message);
-                // TODO: log errors
+                Logger.Log(MessageType.Error, $"Failed to read project data: {ex.Message}");
             }
         }
     }

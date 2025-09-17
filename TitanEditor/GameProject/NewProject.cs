@@ -165,7 +165,7 @@ namespace TitanEditor.GameProject
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message);
-                // TODO: log error
+                  Logger.Log(MessageType.Error, $"Failed to create project at {path}: {ex.Message}");
                 return string.Empty;
             }
         }
