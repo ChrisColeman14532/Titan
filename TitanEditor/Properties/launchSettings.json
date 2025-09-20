@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TitanEditor": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
