@@ -6,8 +6,9 @@
         xmlns:local="clr-namespace:TitanEditor"
         xmlns:editors="clr-namespace:TitanEditor.Editors"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
-        Title="Titan Editor" Height="768" Width="1280">
+        Title="Titan Editor" Height="768" Width="1280"
+        Style="{StaticResource TitanWindowStyle}">
     <Grid>
-        <editors:WorldEditorView/>
+        <editors:WorldEditorView />
     </Grid>
 </Window>
