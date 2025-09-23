@@ -100,7 +100,7 @@ namespace TitanEditor.GameProject
         {
             var path = ProjectPath;
             if (!Path.EndsInDirectorySeparator(path)) path += @"\";
-            path += $@"[]{ProjectName}\";
+            path += $@"{ProjectName}\";
 
             IsValid = false;
             if (string.IsNullOrWhiteSpace(ProjectName.Trim()))
